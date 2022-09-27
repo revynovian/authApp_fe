@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+## React App with Google OAuth
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### **Objectives**
 
-## Available Scripts
+| Objective |  Implementation    |  Status |
+|:----------|:-------------|:--------: |
+| Front End |  Simple React App  | [x] |
+|           |  Google OAuth   |  [x]  |
+|           |  React Router   |  [x]  | 
+|           |  React Context  |  [x]  |
+| Backend   | Express         |  [x]  |
+|           | PassportJS      |  [x]  |
+|           | Google OAuth    |  [x]  |
+|           | Database        |  [-]  |
 
-In the project directory, you can run:
+[x] = done ; [-]= not yet
 
-### `npm start`
+### **Description**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##### Available Endpoints
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+|    Endpoint      |  Description | Protected | Auth Strategy |
+| :--------------  | :------------------- |:----------:|:--: |
+|   /         |  redirect ro login    | no  | - |
+|  /login      |  login Page           | no  | - |
+|  /home            |  home Page    | yes  | Google OAuth2 |
+|  /about   |  about page   | no  | - |
 
-### `npm test`
+##### Website Navigation Flowchart
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609599/refactory-test/flowchart_e7otge.png" alt="flow" border="0" />
 
-### `npm run build`
+### **Preview**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Login Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/login_stcyts.png" alt="login-1" border="0" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Login Page (Dark)
 
-### `npm run eject`
+<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/login_dark_zqsduj.png" alt="login-dark" border="0" />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Google SSO 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609600/refactory-test/singingoogle_cevdiu.png" alt="googlesignin" border="0" width="40%" height="40%"  />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Home Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/home_zqjfxa.png" alt="home" border="0" />
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
+**How to Setup the Project**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A. Back End
 
-### Code Splitting
+install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+and run the development server (install nodemon first to monitor changes/updates in your code):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run start
+# or
+yarn start
+```
 
-### Making a Progressive Web App
+The server will be running at http://localhost:5000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+B. Front End
 
-### Advanced Configuration
+This project created using CRA (create-react-app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+install dependencies
 
-### Deployment
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm run start
+# or
+yarn start
+```
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app will be acessible in your browser at http://localhost:3000/

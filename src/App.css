@@ -1,38 +1,242 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* darl or light mode variation */
+#light {
+  color: black;
+  background-image: url(./images/white.png);
+  /* background-repeat: repeat; */
+}
+#dark {
+  color: white;
+  background-image: url(./images/black.png);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#dark .customButton2,
+#dark .customButton3,
+#dark .about {
+  background-color: grey;
+  border: 1px solid rgb(90, 91, 92);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#light .customButton2,
+#light .customButton3,
+#light .about {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dark .navbar,
+#dark .LoginContainer {
+  background-color: #212124;
+}
+
+#light .navbar,
+#light .LoginContainer {
+  background-color: white;
+}
+
+/* navbar section */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.navbarLogo {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+.navbar a{
+  text-decoration: none ;
+}
+
+/* navlink */
+.navLinkActive {
+  display: flex;
+  border-bottom: 2px solid #14849b;
+  /* border-radius: .5rem; */
+  /* padding: 8px; */
+}
+
+
+
+#light .navbar a{
+  color: black ;
+}
+#dark .navbar a{
+  color: white ;
+}
+
+
+
+.navbarMenuRight,
+.navbarMenuLeft{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbarMenuLeft span {
+  margin-right: 30px;
+}
+.navbarMenuRight li,
+.navbarMenuLeft li {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+
+
+.customButton {
+  background-color: #14849b;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  font-size: .9rem;
+  color: white;
+  padding: .75rem 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.customButton:hover {
+  background-color: #14859bc4;
+}
+
+.userAvatar {
+  border-radius: .5rem;
+  width: 40px;
+  height: 40px;
+  margin-top : 3.5px;
+}
+
+/* toggle dark/light button */
+.customButton3 {
+  border-radius: .5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.customButton3 img{
+  width:  20px;
+  height: 20px;
+}
+
+
+/* login section */
+.customButton2 {
+  /* background-color: #FFFFFF; */
+  
+  border-radius: .5rem;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin: 1rem;
+}
+
+.customButton2 img {
+  height: 22px;
+  width: 22px;
+  margin: 5px;
+  padding: 8px;
+}
+
+
+/* login*/
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loginTitle h5 {
+  font-weight: lighter;
+  margin: 0;
+}
+
+.loginTitle img {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 20px;
+}
+.LoginContainer {
+
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* width: 40%;
+  height: 70%; */
+  width: 470px;
+  height: 500px;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.emailFormContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+/* input  */
+.emailFormContainer input {
+  border-radius: .5rem;
+  width: 200px;
+  padding: 10px 20px 10px;
+  margin: 0.8rem;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.submit {
+  margin: 1rem;
+  width: 240px;
+}
+
+.ssoLoginContainer {
+  display: flex;
+}
+
+/* about */
+.about {
+  width: 20%;
+  opacity: 0.7;
+  font-size: small;
+  margin-top: 20px;
+  padding: 10px 20px 10px;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.aboutContainer,
+.homeContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
