@@ -36,23 +36,13 @@
 
 <img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/login_stcyts.png" alt="login-1" border="0" />
 
-#### Login Page (Dark)
-
-<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/login_dark_zqsduj.png" alt="login-dark" border="0" />
-
-#### Google SSO 
-
-<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609600/refactory-test/singingoogle_cevdiu.png" alt="googlesignin" border="0" width="40%" height="40%"  />
-
-#### Home Page
-
-<img src="https://res.cloudinary.com/revynovian/image/upload/v1653609602/refactory-test/home_zqjfxa.png" alt="home" border="0" />
-
 
 ---
 **How to Setup the Project**
 
 A. Back End
+
+[Repository Link](https://github.com/revynovian/googleAuth_be)
 
 install dependencies
 
